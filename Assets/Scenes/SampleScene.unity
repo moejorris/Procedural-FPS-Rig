@@ -202,6 +202,7 @@ MonoBehaviour:
   Height: 0.01
   Depth: 0.01
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +504,7 @@ GameObject:
   - component: {fileID: 693013192}
   - component: {fileID: 693013193}
   m_Layer: 0
-  m_Name: SightEnd
+  m_Name: SightFar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   Height: 0.01
   Depth: 0.01
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +716,7 @@ MonoBehaviour:
   Height: 0.02
   Depth: 0.02
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1015073051
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +728,7 @@ GameObject:
   - component: {fileID: 1015073052}
   - component: {fileID: 1015073053}
   m_Layer: 0
-  m_Name: SightBegin
+  m_Name: SightNear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,6 +769,7 @@ MonoBehaviour:
   Height: 0.01
   Depth: 0.01
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1029523807
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +822,7 @@ MonoBehaviour:
   Height: 0.04
   Depth: 0.2
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1326280329
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +876,7 @@ MonoBehaviour:
   Height: 0.1
   Depth: -0.02
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1417450081
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1417450082
 Transform:
   m_ObjectHideFlags: 0
@@ -905,6 +911,7 @@ Transform:
   - {fileID: 917975505}
   - {fileID: 1901803000}
   - {fileID: 1912273044}
+  - {fileID: 2003651294}
   m_Father: {fileID: 889118466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1417450083
@@ -927,6 +934,7 @@ MonoBehaviour:
   Height: 0.1
   Depth: 0.4
   mesh: {fileID: 4300006, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1417450084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +955,7 @@ MonoBehaviour:
   Height: 0.01
   Depth: 0.01
   mesh: {fileID: 4300006, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1430634624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1042,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430634624}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1464652056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464652057}
+  - component: {fileID: 1464652058}
+  m_Layer: 0
+  m_Name: Bolt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464652057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464652056}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0333, z: -0.0846}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2003651294}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464652058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464652056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b997cf36d3a44f9488d430e9f7981a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoType: 0
+  isWireframe: 1
+  useLocalSpace: 1
+  color: {r: 0, g: 0, b: 1, a: 1}
+  Width: 0.01
+  Height: 0.01
+  Depth: 0.01
+  mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1811962190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,7 +1192,7 @@ GameObject:
   - component: {fileID: 1871817341}
   - component: {fileID: 1871817342}
   m_Layer: 0
-  m_Name: Trigger
+  m_Name: TriggerWell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,6 +1233,7 @@ MonoBehaviour:
   Height: 0.0125
   Depth: 0.0125
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1901802999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1901803000
 Transform:
   m_ObjectHideFlags: 0
@@ -1223,6 +1286,7 @@ MonoBehaviour:
   Height: 5
   Depth: 5
   mesh: {fileID: 4300006, guid: bafe1e4d156ffe945aa89b304a97f261, type: 3}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1912273043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1339,7 @@ MonoBehaviour:
   Height: 2.5
   Depth: 2.5
   mesh: {fileID: 4300000, guid: 1fc6205e9672b6648a3b71f17597b881, type: 3}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1924246768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1478,7 @@ MonoBehaviour:
   Height: 0.02
   Depth: 0.02
   mesh: {fileID: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &2003651293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003651294}
+  - component: {fileID: 2003651295}
   m_Layer: 0
   m_Name: 1911_ViewModel
   m_TagString: Untagged
@@ -1437,8 +1504,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003651293}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.116, y: -0.126, z: 0.368}
+  m_LocalRotation: {x: 0, y: 0, z: 0.07376037, w: 0.997276}
+  m_LocalPosition: {x: -0.06, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1446,12 +1513,92 @@ Transform:
   - {fileID: 1994685491}
   - {fileID: 981384060}
   - {fileID: 1029523808}
+  - {fileID: 1464652057}
   - {fileID: 1015073052}
   - {fileID: 693013192}
   - {fileID: 1871817341}
   - {fileID: 1326280330}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 1417450082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.46}
+--- !u!114 &2003651295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003651293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52183b56f27cf4a4ba78d646cbaeb71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAiming: 0
+  currentRecoiled: 0
+  weaponAnimationType: 0
+  weight: 1
+  recoilAmount: 100000
+  sightNear: {fileID: 1015073052}
+  sightFar: {fileID: 693013192}
+  gripLeft: {fileID: 1994685491}
+  gripRight: {fileID: 981384060}
+  magazine: {fileID: 1326280330}
+  slide: {fileID: 1029523808}
+  bolt: {fileID: 1464652057}
+  triggerWell: {fileID: 1871817341}
+  idlePositionOffset: {x: -0.06, y: 0, z: 0.09}
+  idleRotationOffset: {x: 0, y: 0, z: 0}
+  adsPositionOffset: {x: 0, y: 0, z: 0}
+  adsRotationOffset: {x: 0, y: 0, z: 0}
+  recoilPositionZLimit: -0.01
+  recoilRotationXLimit: 1
+  recoilPositionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  recoilRotationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1020185477222559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,4 +2116,3 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 393662615}
-  - {fileID: 2003651294}
