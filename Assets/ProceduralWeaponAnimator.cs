@@ -49,11 +49,12 @@ public class ProceduralWeaponAnimator : MonoBehaviour
 
     void Update()
     {
-        currentRecoiled = Mathf.Clamp(currentRecoiled - Time.deltaTime, 0, 1);
+        currentRecoiled = Mathf.Clamp(currentRecoiled - Time.deltaTime * weight, 0, 1);
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.Backspace))
         {
-            currentRecoiled += 0.5f * Time.deltaTime / weight;
+            currentRecoiled *= 0.01f;
+            currentRecoiled += Time.deltaTime * recoilAmount;
         }
     }
 
@@ -65,11 +66,11 @@ public class ProceduralWeaponAnimator : MonoBehaviour
 
     void UpdateRecoil()
     {
-        float newXRot = Mathf.Lerp(0, recoilRotationXLimit, recoilRotationCurve.Evaluate(Recoiled));
-        float newZPos = Mathf.Lerp(0, recoilPositionZLimit, recoilPositionCurve.Evaluate(Recoiled));
+        float newXRot = Mathf.Lerp(0, recoilRotationXLimit, recoilRotationCurve.Evaluate(currentRecoiled));
+        float newZPos = Mathf.Lerp(0, recoilPositionZLimit, recoilPositionCurve.Evaluate(currentRecoiled));
 
-        transform.localPosition = new Vector3(0, 0, newZPos);
-        transform.localEulerAngles = new Vector3(newXRot, 0, 0);
+        transform.localPosition = new Vector3(0, 0, newZPos) + idlePositionOffset;
+        transform.localRotation = Quaternion.Euler(newXRot + idleRotationOffset.x, idleRotationOffset.y, idleRotationOffset.z);
     }
     
 }
